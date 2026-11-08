@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="referrer"
+          content="strict-origin-when-cross-origin">
+
+    <title>
+        Экономикалық және мәдени қарым-қатынас | Тарих
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="branding">
+        <div class="logo">ҚТ</div>
+
+        <div>
+            <h1>ҚАЗАҚСТАН ТАРИХЫ</h1>
+            <p>1-курс • Интерактивті сабақ платформасы</p>
+        </div>
+    </div>
+
+    <div class="header-tags">
+        <span>§7–8</span>
+        <span>80 минут</span>
+    </div>
+
+</header>
+
+<div class="app">
+
+    <main class="main">
+
+        <section class="topic-header">
+
+            <div class="topic-eyebrow">
+                I БӨЛІМ • ЕКІНШІ ТАРАУ
+            </div>
+
+            <h2>
+                Экономикалық және мәдени қарым-қатынастың
+                дамуы мен өзара әсері
+            </h2>
+
+            <p>
+                Дала мен қала: өзара қарым-қатынас
+                және өзара әсері
+            </p>
+
+            <div class="progress-track">
+                <div id="progressBar"></div>
+            </div>
+
+            <div class="progress-info">
+                <span id="currentStageName">Кіріспе</span>
+                <span id="pageNumber">1 / 8</span>
+            </div>
+
+        </section>
+
+        <section id="content" class="content">
+        </section>
+
+        <footer class="footer">
+            <span>Қазақстан тарихы · §7–8</span>
+            <strong>BY DARKHAN</strong>
+        </footer>
+
+    </main>
+
+    <aside class="sidebar">
+
+        <h3>САБАҚТЫ БАСҚАРУ</h3>
+
+        <div class="side-section">
+
+            <div class="side-label">
+                Сабақтың жалпы уақыты
+            </div>
+
+            <div class="timer" id="timer">
+                00:00
+            </div>
+
+            <div class="time-remaining" id="remaining">
+                Қалғаны: 80:00
+            </div>
+
+            <div class="timer-controls">
+
+                <button id="startTimer" class="start">
+                    Бастау
+                </button>
+
+                <button id="pauseTimer" class="pause">
+                    Тоқтату
+                </button>
+
+                <button id="resetTimer" class="reset">
+                    Нөлдеу
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="side-section">
+
+            <div class="side-label">
+                Сабақтың 8 кезеңі
+            </div>
+
+            <nav id="stageNavigation"></nav>
+
+        </div>
+
+        <div class="side-section">
+
+            <div class="side-label">
+                Командалардың ұпайлары
+            </div>
+
+            <div id="scoreboard"></div>
+
+            <button id="resetScores" class="reset-scores">
+                Барлық ұпайды нөлдеу
+            </button>
+
+        </div>
+
+        <div class="side-section page-navigation">
+
+            <button id="previousBtn" class="previous">
+                ← Алдыңғы бет
+            </button>
+
+            <button id="nextBtn" class="next">
+                Келесі бет →
+            </button>
+
+        </div>
+
+    </aside>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

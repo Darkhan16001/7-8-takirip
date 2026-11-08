@@ -1,0 +1,1070 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --background: #08111f;
+    --panel: #11213a;
+    --panel-light: #1a3150;
+    --border: #324d6d;
+    --text: #f5f8ff;
+    --muted: #b4c6dc;
+    --gold: #f3c779;
+    --blue: #70a9ff;
+    --green: #42d5a1;
+    --red: #f57b89;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(
+            circle at 10% 0%,
+            #224362,
+            transparent 38%
+        ),
+        var(--background);
+
+    color: var(--text);
+    font-family: 'Manrope', Arial, sans-serif;
+    line-height: 1.85;
+}
+
+button, textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    filter: brightness(1.15);
+}
+
+button:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+a {
+    color: #a9ceff;
+}
+
+/* ШАПКА */
+
+.header {
+    min-height: 94px;
+    padding: 18px 34px;
+
+    background: #0d1b30;
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+
+    background: linear-gradient(
+        135deg,
+        #ffe3a1,
+        #d5a052
+    );
+
+    border-radius: 17px;
+    color: #19283d;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.branding h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.branding p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.header-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.header-tags span {
+    background: #2a4261;
+    border-radius: 30px;
+    padding: 8px 15px;
+
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* ОРНАЛАСУ */
+
+.app {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 325px;
+
+    align-items: start;
+    gap: 25px;
+
+    max-width: 1750px;
+    margin: auto;
+    padding: 25px;
+}
+
+.main {
+    min-width: 0;
+}
+
+.topic-header {
+    background: linear-gradient(
+        125deg,
+        #214765,
+        #102139
+    );
+
+    border: 1px solid var(--border);
+    border-radius: 22px;
+
+    padding: 34px;
+    margin-bottom: 22px;
+}
+
+.topic-eyebrow {
+    color: var(--gold);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.topic-header h2 {
+    font-size: clamp(27px, 3vw, 42px);
+    line-height: 1.3;
+    margin: 17px 0;
+}
+
+.topic-header p {
+    font-size: 16px;
+    color: #c9dbef;
+}
+
+.progress-track {
+    height: 10px;
+    background: #091626;
+    border-radius: 40px;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    width: 12.5%;
+    border-radius: 40px;
+
+    background: linear-gradient(
+        90deg,
+        #538eff,
+        #4cdfac
+    );
+
+    transition: width .3s;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    color: #c1d3ef;
+    font-size: 13px;
+    font-weight: 800;
+
+    margin-top: 10px;
+}
+
+/* МАЗМҰН */
+
+.content {
+    min-height: 520px;
+}
+
+.card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+    padding: 31px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: var(--gold);
+    font-size: clamp(23px, 2.4vw, 31px);
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.card h4 {
+    color: #a9ccff;
+    font-size: 21px;
+    margin: 26px 0 12px;
+}
+
+.card p {
+    color: #e3ecf9;
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 17px;
+}
+
+.card ul,
+.card ol {
+    padding-left: 26px;
+    font-size: 17px;
+}
+
+.card li {
+    margin-bottom: 12px;
+}
+
+.stage-time {
+    display: inline-block;
+    background: #2b4968;
+
+    padding: 7px 15px;
+    margin-bottom: 19px;
+
+    border-radius: 30px;
+    color: var(--gold);
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.highlight {
+    background: #223d5e;
+    border-left: 5px solid var(--gold);
+    border-radius: 12px;
+
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 17px;
+}
+
+.notice {
+    background: #173c36;
+    border-left: 4px solid var(--green);
+    border-radius: 12px;
+
+    padding: 20px;
+    margin: 20px 0;
+
+    color: #dffff2;
+}
+
+.notice p {
+    color: #dffff2;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* СУРЕТТЕР */
+
+.picture {
+    padding: 12px;
+    margin: 23px 0;
+
+    background: #091829;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+}
+
+.picture img {
+    display: block;
+    width: 100%;
+    max-height: 430px;
+
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.picture figcaption {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.picture figcaption a {
+    color: #acd0ff;
+}
+
+.image-error {
+    display: none;
+    background: #264563;
+    border-radius: 12px;
+    padding: 35px;
+    text-align: center;
+}
+
+/* ТҮСІНДІРУ СХЕМАЛАРЫ */
+
+.exchange-diagram {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 12px;
+
+    align-items: stretch;
+    margin: 25px 0;
+}
+
+.exchange-side {
+    background: #1c3757;
+    border: 1px solid #456b91;
+    border-radius: 15px;
+
+    padding: 22px;
+    text-align: center;
+}
+
+.exchange-side .emoji {
+    font-size: 39px;
+}
+
+.exchange-side strong {
+    display: block;
+    color: var(--gold);
+    font-size: 19px;
+    margin: 8px 0;
+}
+
+.exchange-side span {
+    font-size: 15px;
+    color: #d5e5f7;
+}
+
+.exchange-arrow {
+    display: grid;
+    place-items: center;
+    font-size: 33px;
+    color: var(--gold);
+}
+
+.fact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 13px;
+    margin: 23px 0;
+}
+
+.fact {
+    background: #1d3654;
+    border: 1px solid #416183;
+    border-radius: 14px;
+    padding: 18px;
+    text-align: center;
+}
+
+.fact .emoji {
+    font-size: 32px;
+    display: block;
+}
+
+.fact strong {
+    display: block;
+    color: var(--gold);
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.fact small {
+    color: #d0dff2;
+    font-size: 13px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.compare-table td,
+.compare-table th {
+    padding: 14px;
+    border: 1px solid #506b8c;
+
+    text-align: left;
+    vertical-align: top;
+    font-size: 15px;
+}
+
+.compare-table th {
+    background: #315679;
+}
+
+.compare-table td {
+    background: #1b314d;
+}
+
+/* КОНСПЕКТ */
+
+.notebook {
+    background: #fff8e9;
+    color: #263348;
+
+    padding: 34px;
+    border-radius: 16px;
+    border-left: 7px solid #d6a552;
+}
+
+.notebook-title {
+    color: #654519;
+    font-size: 23px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+.notebook h4 {
+    color: #80531c;
+    margin-top: 26px;
+}
+
+.notebook p {
+    color: #263447;
+    font-size: 18px;
+    line-height: 2.15;
+    margin-bottom: 17px;
+}
+
+/* ВИДЕО */
+
+.video-panel {
+    background: #091727;
+    border: 1px solid #365777;
+    border-radius: 17px;
+
+    padding: 14px;
+    margin: 20px 0;
+}
+
+.video-player {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    background: #000;
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.video-player iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.video-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.video-buttons button,
+.video-buttons a {
+    border: none;
+    border-radius: 10px;
+
+    background: #305f9e;
+    color: white;
+
+    text-decoration: none;
+    padding: 12px 17px;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.video-buttons .active {
+    background: #ba8242;
+}
+
+.video-buttons a {
+    background: #b33f50;
+}
+
+.video-status {
+    font-size: 13px;
+    color: #c7d9ef;
+    margin-top: 13px;
+}
+
+.fallback-slides {
+    background: linear-gradient(
+        135deg,
+        #213f60,
+        #0c1a2c
+    );
+
+    border-radius: 14px;
+    padding: 28px;
+
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    border: 1px solid #4e7198;
+}
+
+.fallback-slides .slide-emoji {
+    font-size: 58px;
+}
+
+.fallback-slides h4 {
+    color: var(--gold);
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+.fallback-slides p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.slide-progress {
+    height: 7px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #0c1b2d;
+    margin-top: 16px;
+}
+
+#slideProgress {
+    height: 100%;
+    background: var(--green);
+    width: 0%;
+    transition: width .3s;
+}
+
+/* СҰРАҚТАР */
+
+.question {
+    background: #1a304c;
+    border: 1px solid #3e5b79;
+
+    border-radius: 15px;
+    padding: 21px;
+    margin-bottom: 15px;
+}
+
+.question-index {
+    font-size: 12px;
+    color: var(--gold);
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.question-title {
+    font-size: 19px;
+    line-height: 1.75;
+    font-weight: 700;
+}
+
+.reveal {
+    background: #3166a7;
+    border: none;
+    border-radius: 10px;
+
+    color: white;
+    padding: 11px 16px;
+
+    font-weight: 800;
+    font-size: 14px;
+    margin-top: 13px;
+}
+
+.answer {
+    display: none;
+    background: #194039;
+    border-left: 4px solid var(--green);
+    border-radius: 10px;
+
+    padding: 16px;
+    margin-top: 13px;
+
+    color: #e0fff3;
+    font-size: 16px;
+}
+
+.answer.visible {
+    display: block;
+}
+
+.writing-task {
+    background: #1e3757;
+    border-left: 4px solid #82b3ff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 19px 0;
+}
+
+.writing-task p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.student-picker {
+    background: #1d3757;
+    border-radius: 15px;
+    padding: 22px;
+    margin-top: 22px;
+}
+
+.student-picker textarea {
+    background: #0b1a2d;
+    border: 1px solid #577494;
+    color: white;
+
+    width: 100%;
+    min-height: 95px;
+    resize: vertical;
+
+    border-radius: 10px;
+    padding: 13px;
+    font-size: 15px;
+}
+
+.student-picker button {
+    border: none;
+    border-radius: 10px;
+
+    background: var(--gold);
+    color: #18283e;
+
+    padding: 12px 19px;
+    font-weight: 800;
+    margin-top: 12px;
+}
+
+#studentResult {
+    color: var(--gold);
+    font-size: 21px;
+    font-weight: 800;
+    margin-top: 14px;
+}
+
+/* КОМАНДАЛЫҚ ОЙЫН */
+
+.teams {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.team {
+    background: #192f4a;
+    border: 1px solid #3d5b79;
+    border-radius: 16px;
+
+    padding: 18px;
+    min-width: 0;
+}
+
+.team:nth-child(1) {
+    border-top: 5px solid #6ca5ff;
+}
+
+.team:nth-child(2) {
+    border-top: 5px solid #f3c472;
+}
+
+.team:nth-child(3) {
+    border-top: 5px solid #4edcaf;
+}
+
+.team h4 {
+    color: var(--gold);
+    font-size: 19px;
+    margin: 0 0 12px;
+}
+
+.team p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.statement {
+    background: #0d1d31;
+    border-radius: 11px;
+
+    padding: 13px;
+    margin: 12px 0;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.statement .answer {
+    font-size: 14px;
+}
+
+.score-controls {
+    margin-top: 12px;
+}
+
+.award {
+    border: none;
+    border-radius: 9px;
+    background: #237a5b;
+    color: white;
+
+    padding: 10px 13px;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.award.active {
+    background: #a57b39;
+}
+
+.winner-box {
+    background: #1b3d3d;
+    border: 1px solid #478e7e;
+    border-radius: 18px;
+
+    padding: 27px;
+    margin: 22px 0;
+    text-align: center;
+}
+
+.final-score {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+
+    background: #224254;
+    border-radius: 10px;
+
+    padding: 13px 18px;
+    margin: 9px 0;
+}
+
+.final-score strong {
+    color: var(--gold);
+}
+
+.winner-name {
+    color: var(--green);
+    font-size: 27px;
+    font-weight: 800;
+    margin-top: 18px;
+}
+
+/* ОҢ ЖАҚТАҒЫ БАСҚАРУ */
+
+.sidebar {
+    position: sticky;
+    top: 14px;
+
+    max-height: calc(100vh - 28px);
+    overflow-y: auto;
+
+    background: #11213a;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    padding: 19px;
+}
+
+.sidebar h3 {
+    color: var(--gold);
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.side-section {
+    padding-bottom: 19px;
+    margin-bottom: 19px;
+    border-bottom: 1px solid var(--border);
+}
+
+.side-section:last-child {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-label {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.timer {
+    color: var(--gold);
+    text-align: center;
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+.time-remaining {
+    color: #bfd1eb;
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 6px;
+}
+
+.timer-controls button {
+    flex: 1;
+    border: none;
+    border-radius: 9px;
+
+    padding: 10px 5px;
+    color: white;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.timer-controls .start {
+    background: #208564;
+}
+
+.timer-controls .pause {
+    background: #445e7c;
+}
+
+.timer-controls .reset {
+    background: #914455;
+}
+
+.stage-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    padding: 11px;
+
+    background: #1c3452;
+    color: white;
+
+    border: 1px solid #365575;
+    border-radius: 10px;
+
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.stage-button.active {
+    background: #3368aa;
+    border-color: #8ab9ff;
+}
+
+.stage-button small {
+    white-space: nowrap;
+    color: #d2e2f7;
+}
+
+.score-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    background: #1e3653;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.score-row strong {
+    color: var(--gold);
+}
+
+.reset-scores {
+    width: 100%;
+    background: transparent;
+    color: #ffbec8;
+
+    border: 1px solid #8d5862;
+    border-radius: 9px;
+
+    padding: 11px;
+    margin-top: 8px;
+}
+
+.page-navigation {
+    display: grid;
+    gap: 9px;
+}
+
+.page-navigation button {
+    width: 100%;
+    padding: 14px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.previous {
+    background: #2d496a;
+    color: white;
+}
+
+.next {
+    background: var(--gold);
+    color: #15253a;
+}
+
+.footer {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+
+    color: #93adca;
+    font-size: 13px;
+}
+
+.footer strong {
+    color: var(--gold);
+    letter-spacing: 2px;
+}
+
+/* ТЕЛЕФОН МЕН ПЛАНШЕТ */
+
+@media (max-width: 1150px) {
+    .teams {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 850px) {
+    .app {
+        grid-template-columns: 1fr;
+        padding: 12px;
+    }
+
+    .sidebar {
+        position: static;
+        max-height: none;
+    }
+
+    .header {
+        padding: 16px;
+    }
+
+    .header-tags {
+        display: none;
+    }
+
+    .branding h1 {
+        font-size: 17px;
+    }
+
+    .topic-header,
+    .card {
+        padding: 20px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    .notebook {
+        padding: 22px;
+    }
+
+    .notebook p {
+        font-size: 17px;
+    }
+
+    .fact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exchange-diagram {
+        grid-template-columns: 1fr;
+    }
+
+    .exchange-arrow {
+        transform: rotate(90deg);
+    }
+}
+
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    .header,
+    .sidebar,
+    .footer,
+    .reveal,
+    .score-controls {
+        display: none !important;
+    }
+
+    .app {
+        display: block;
+    }
+
+    .card,
+    .notebook {
+        background: white;
+        color: black;
+        border: none;
+    }
+}
